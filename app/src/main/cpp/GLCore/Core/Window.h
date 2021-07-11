@@ -4,7 +4,11 @@
 
 #ifndef OPENGLESFRAMEWORK_WINDOW_H
 #define OPENGLESFRAMEWORK_WINDOW_H
+#include <memory>
+
 namespace GLCore {
+
+    class Scene;
     class Window {
 
     public:
@@ -17,9 +21,13 @@ namespace GLCore {
         void OnTouchMove(int index, unsigned int xPos, unsigned int yPos);
 
         void OnDraw();
+
+        void RegisterScene(std::unique_ptr<Scene> scene) {m_Scene = std::move(scene);}
     private:
         unsigned int m_Width;
         unsigned int m_Height;
+
+        std::unique_ptr<Scene> m_Scene;
     };
 }
 

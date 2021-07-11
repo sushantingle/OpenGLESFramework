@@ -1,10 +1,7 @@
 #ifndef OPENGLESFRAMEWORK_SHADER_H
 #define OPENGLESFRAMEWORK_SHADER_H
 
-#include <string>
-#include <vector>
-#include <GLES2/gl2.h>
-#include <GLES2/gl2ext.h>
+#include "../GLCore.h"
 
 namespace GLCore::Utils {
 

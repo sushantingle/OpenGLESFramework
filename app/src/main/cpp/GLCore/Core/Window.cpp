@@ -3,6 +3,7 @@
 //
 
 #include "Window.h"
+#include "Scene.h"
 
 namespace GLCore{
     void Window::OnCreate(unsigned int w, unsigned int h) {
@@ -32,7 +33,8 @@ namespace GLCore{
     }
 
     void Window::OnDraw() {
-
+        if (m_Scene)
+            m_Scene->OnUpdate();
     }
 }
 
