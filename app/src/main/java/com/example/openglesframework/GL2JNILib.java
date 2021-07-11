@@ -18,6 +18,8 @@ package com.example.openglesframework;
 
 // Wrapper for native library
 
+import android.content.res.AssetManager;
+
 public class GL2JNILib {
 
      static {
@@ -30,4 +32,5 @@ public class GL2JNILib {
      */
      public static native void init(int width, int height);
      public static native void step();
+     public static native void loadAssetManager(AssetManager mgr);
 }

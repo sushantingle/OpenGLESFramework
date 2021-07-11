@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId 'com.example.openglesframework'
-        minSdkVersion 14
+        minSdkVersion 16
         targetSdkVersion 29
         externalNativeBuild {
             cmake {

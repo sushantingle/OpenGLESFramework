@@ -21,6 +21,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
+import android.content.res.AssetManager;
 
 import java.io.File;
 
@@ -34,6 +35,9 @@ public class GL2JNIActivity extends Activity {
         mView = new GL2JNIView(getApplication());
 
 	setContentView(mView);
+
+        AssetManager mgr = getResources().getAssets();
+        GL2JNILib.loadAssetManager (mgr);
     }
 
     @Override protected void onPause() {
